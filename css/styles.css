@@ -110,13 +110,14 @@ html {
 
 .aside {
   width: 16%;
+  min-width: 250px;
   height: 100%;
   position: fixed;
   border-right: 1px solid black;
   overflow: hidden;
 }
 .aside__title {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 600;
   margin-left: 25px;
   margin-top: 25px;
@@ -124,14 +125,14 @@ html {
 }
 .aside__nav {
   font-weight: 500;
-  height: 100%;
+  overflow-y: auto;
 }
 .aside__list {
   overflow-y: auto;
   height: 100%;
 }
 .aside__list-item {
-  font-size: 2.7em;
+  font-size: 2em;
   padding: 20px 10px;
   border-top: 1px solid black;
 }
@@ -151,13 +152,15 @@ html {
 }
 
 .article {
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 135%;
   font-weight: 300;
+  padding-top: 40px;
+  padding-right: 40px;
 }
 .article__header {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 40px;
 }
 .article__paragraph {
@@ -180,7 +183,7 @@ html {
   list-style-type: disc;
 }
 .article__code {
-  display: inline-block;
+  display: block;
   font-style: italic;
   font-size: 0.9em;
 }/*# sourceMappingURL=styles.css.map */
