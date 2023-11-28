@@ -1,0 +1,125 @@
+@use "sass:math";
+
+@import "_fonts.scss";
+
+
+$nav-width: 16%;
+$aside-margin: 10px;
+$nav-border-color: black;
+$main-border-color: black;
+
+%nav-link{
+  color: black;
+  text-decoration: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Roboto';
+}
+
+.aside{
+  width: $nav-width;
+  height: 100%;
+  position: fixed;
+  border-right: 1px solid $main-border-color;
+  overflow: hidden;
+
+  &__title{
+    font-size: 4em;
+    font-weight: 600;
+    margin: {
+      left: 25px;
+      top: 25px;
+      bottom: 25px;
+    };
+  }
+
+  &__nav{
+    font-weight: 500;
+    height: 100%;
+  }
+
+  &__list{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &__link{
+    @extend %nav-link;
+  }
+  
+  &__list-item{
+    font-size: 2.7em;
+    padding: 20px 10px;
+    border-top: 1px solid $nav-border-color;
+    &:hover{
+      background-color: grey;
+      color: whitesmoke;
+    }
+  }
+
+
+}
+
+
+.main{
+  margin: {
+    left: $nav-width
+  };
+  padding: {
+    top: 30px;
+    left: 40px;
+  };
+  font-size: 2rem;
+  &__article{
+    margin-bottom: 40px;
+  }
+}
+
+.article{
+  font-size: 1.5em;
+  line-height: 135%;
+  font-weight: 300;
+  &__header{
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  &__paragraph{
+    margin: {
+      left: 15px;
+      bottom: 25px;
+      top: 25px;
+    };
+  }
+
+  &__list{
+    display: inline-block;
+    margin: {
+      top: 10px;
+      bottom: 30px;
+      left: 80px
+    };
+    .article__list{
+      margin: {
+        top: 35px;
+        bottom: 0;
+      };
+    }
+    &-item{
+      margin-bottom: 20px;
+      list-style-type: disc;
+    }
+  }
+  &__code{
+    display: inline-block;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+}
