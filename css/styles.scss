@@ -24,17 +24,16 @@ html{
 
 .aside{
   width: $nav-width;
-  min-width: 250px;
   height: 100%;
   position: fixed;
   border-right: 1px solid $main-border-color;
   overflow: hidden;
-
+  font-size: 1rem;
   &__title{
     font-size: 3em;
     font-weight: 600;
-    margin: {
-      left: 25px;
+    padding: {
+      left: 10px;
       top: 25px;
       bottom: 25px;
     };
@@ -48,6 +47,8 @@ html{
   &__list{
     overflow-y: auto;
     height: 100%;
+    max-height: 100vh;
+    padding-bottom: 60px
   }
 
   &__link{
@@ -123,8 +124,87 @@ html{
     }
   }
   &__code{
-    display: block;
+    display: inline-block;
+    padding: {
+      left: 60px;
+      top: 30px;
+      bottom: 20px;
+      right: 60px;
+    }
     font-style: italic;
     font-size: 0.9em;
+    background-color: #020227;
+    color: #F7F7F2;
+    border-radius: 10px;
   }
+}
+
+.menu-button{
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  border: none;
+  background: transparent;
+  display: none;
+  &__img{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &:active{
+    background-color: rgb(219, 213, 213);
+  }
+}
+
+.hide-overflow{
+ height: 100vh;
+ overflow: hidden;
+}
+
+
+@media (max-width:1920px) {
+  .aside{
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width:1279px) {
+  .menu-button{
+    display: block;
+  }
+  .aside{
+    display: none;
+  }
+  .aside_mobile{
+    display: block;
+    width:100% ;
+    background-color: #F0F4EF;
+  }
+  .main{
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .article{
+    padding: 15px;
+    &__header{
+      text-align: center;
+    }
+    &__list{
+      margin: 0 auto;
+      padding-left: 30px;
+    }
+    &__code{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
 }
