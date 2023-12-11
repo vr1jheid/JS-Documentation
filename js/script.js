@@ -12,7 +12,7 @@ menuButton.addEventListener("click", function(){
 navMenu.addEventListener("click", function(event){
   let link = event.target.closest(".aside__link")
   if (!link) return;
-  main.classList.toggle("hide-overflow");
+  main.classList.remove("hide-overflow");
   navMenu.classList.toggle("aside_mobile");
 
 })
